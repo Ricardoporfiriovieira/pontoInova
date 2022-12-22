@@ -1,0 +1,54 @@
+<%- include ('partials/header.ejs')%>
+<body>
+
+    <%- include ('partials/navbar.ejs')%>
+    <hr>
+
+    <div class="container">
+
+        <div class="card text-center">
+            <div class="card-header">
+                <h1 class="card-title">Registro Usuario</h1>
+            </div>
+            <div class="card-body">
+                <form class="row g-3" id="formulario" action="/usuario/criar" method="post" novalidate>
+
+                    <div class="col-md-6">
+                      <label for="nome" class="form-label">Nome Completo</label>
+                      <input type="text" class="form-control" name="nome" placeholder="Nome Completo" required>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="matricula" class="form-label">Matricula</label>
+                      <input type="number" class="form-control" name="matricula" placeholder="Matrícula" required>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="text" class="form-control" name="email" placeholder="exemplo@gmail.com" required>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label for="senha" class="form-label">Senha</label>
+                      <input type="password" class="form-control" name="senha" placeholder="Senha" required>
+                    </div>
+
+                    
+
+                    <div class="col-md-6  d-flex align-items-end justify-content-center">
+                        <span class="input-group-text" id="nascimento" >Data de nascimento</span>
+                        <input name="nascimento" type="date" class="form-control" required>
+                    </div>
+                   
+                   
+
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary">Realizar Cadastro</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include ('partials/footer.ejs')%>
+
